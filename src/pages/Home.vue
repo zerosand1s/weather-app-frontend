@@ -63,7 +63,7 @@ export default {
     fetchWeatherdata: async function(query = '') {
       this.fetchingData = true;
       const params = {
-        url: 'http://localhost:3000/',
+        url: process.env.VUE_APP_API_BASE_URL,
         methos: 'get',
         params: {
           query,
